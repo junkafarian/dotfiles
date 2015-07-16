@@ -76,6 +76,8 @@
 		fi \
 	}; f"
 
+	recent-branches = !git for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(refname:short):%(committerdate:relative)' |column -t -s ':'
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
