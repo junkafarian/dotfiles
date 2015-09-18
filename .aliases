@@ -144,7 +144,7 @@ alias reload="exec $SHELL -l"
 alias use-iojs="brew unlink node && brew link --force iojs"
 alias use-node="brew unlink iojs && brew link --force node"
 
-alias cleanpyc=find . -name '*.pyc' -delete
+alias cleanpyc="find . -name '*.pyc' -delete"
 
 # Add a few extra safeguards to the release process:
 # - Fetch from origing before finishing the release to ensure no commits are missing
