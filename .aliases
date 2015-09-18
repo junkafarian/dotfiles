@@ -143,3 +143,12 @@ alias reload="exec $SHELL -l"
 # Easily switch between `io.js` and `Node.js`
 alias use-iojs="brew unlink node && brew link --force iojs"
 alias use-node="brew unlink iojs && brew link --force node"
+
+alias cleanpyc=find . -name '*.pyc' -delete
+
+# Add a few extra safeguards to the release process:
+# - Fetch from origing before finishing the release to ensure no commits are missing
+# - Auto tag the release with the version name
+# - push all the branches to origin on completion
+# https://github.com/nvie/gitflow/wiki/Command-Line-Arguments#git-flow-release-finish--fsumpkn-version
+alias release="git flow release finish -F -m $1 -p $1"
