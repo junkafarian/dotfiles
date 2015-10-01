@@ -152,3 +152,7 @@ alias cleanpyc="find . -name '*.pyc' -delete"
 # - push all the branches to origin on completion
 # https://github.com/nvie/gitflow/wiki/Command-Line-Arguments#git-flow-release-finish--fsumpkn-version
 alias release="git flow release finish -F -m $1 -p $1"
+
+# Docker shortcuts
+alias dc=docker-compose  # overrides "desk calculator"
+alias dm=docker-machine
